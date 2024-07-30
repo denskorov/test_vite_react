@@ -1,10 +1,10 @@
 import './App.css'
-import UserGreeting from "./UserGreeting.jsx";
+import List from "./List.jsx";
 
 function App() {
     return (
         <>
-            <UserGreeting  isLoggedIn={true} />
+            <List  />
         </>
     );
 }
