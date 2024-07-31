@@ -1,11 +1,14 @@
 import './App.css'
-import UseEffectComponent from "./useEffectComponent.jsx";
+import DigitalClock from "./DigitalClock.jsx";
 
 function App() {
 
     return (
         <>
-            <UseEffectComponent/>
+            <DigitalClock/>
+            <DigitalClock/>
+            <DigitalClock/>
+            <DigitalClock/>
         </>
     );
 }
