@@ -1,11 +1,11 @@
 import './App.css'
-import Counter from "./Counter.jsx";
+import MyComponentForm from "./MyComponentForm.jsx";
 
 function App() {
 
     return (
         <>
-            <Counter/>
+            <MyComponentForm/>
         </>
     );
 }
