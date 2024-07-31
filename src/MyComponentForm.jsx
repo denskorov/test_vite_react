@@ -3,9 +3,15 @@ import {useState} from "react";
 function MyComponentForm() {
 
 
-    const [name, setName] = useState("");
-    const [age, setAge] = useState(50);
-    const [gender, setGender] = useState('male');
+    const [user, setUser] = useState({
+        name: '',
+        age: 20,
+        gender: 'male',
+    });
+
+    // const [name, setName] = useState("");
+    // const [age, setAge] = useState(50);
+    // const [gender, setGender] = useState('male');
     const [comment, setComment] = useState("");
     const [color, setColor] = useState("#eee");
 
@@ -13,18 +19,18 @@ function MyComponentForm() {
     return <>
         <div>
             <label htmlFor="">Name</label>
-            <input type="text" value={name} onChange={(e) => setName(e.target.value)}/>
+            <input type="text" value={user.name} onChange={(e) => setUser(u => ({...u, name: e.target.value}))}/>
         </div>
         <div>
             <label htmlFor="">Age</label>
-            <input type="number" value={age} onChange={(e) => setAge(+e.target.value)}/>
+            <input type="number" value={user.age} onChange={(e) => setUser(u => ({...u, age: +e.target.value}))}/>
         </div>
         <div>
             <label htmlFor="">Gender</label>
-            <input type="radio" value="make" checked={gender === 'male'}
-                   onChange={(e) => setGender(e.target.value)}/>
-            <input type="radio" value="female" checked={gender === 'female'}
-                   onChange={(e) => setGender(e.target.value)}/>
+            <input type="radio" value="male" checked={user.gender === 'male'}
+                   onChange={(e) => setUser(u => ({...u, gender: e.target.value}))}/>
+            <input type="radio" value="female" checked={user.gender === 'female'}
+                   onChange={(e) => setUser(u => ({...u, gender: e.target.value}))}/>
         </div>
         <div>
             <label htmlFor="">Comment</label>
@@ -36,11 +42,10 @@ function MyComponentForm() {
         </div>
         <hr/>
 
-        <p><b>Name:</b> {name}</p>
-        <p><b>Age:</b> {age}</p>
-        <p><b>Gender:</b> {gender}</p>
+        <p><b>Name:</b> {user.name}</p>
+        <p><b>Age:</b> {user.age}</p>
+        <p><b>Gender:</b> {user.gender}</p>
         <p><b>Comment:</b> {comment}</p>
-        <p><b>Name:</b> {age}</p>
         <p><b>Color:</b>
             <button style={{backgroundColor: color}}>test</button>
             {color}</p>
