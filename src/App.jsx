@@ -1,14 +1,16 @@
 import './App.css'
-import ComponentA from "./ComponentA.jsx";
-import {useState} from "react";
+import {useRef} from "react";
 
 function App() {
 
-    const [user, setUser] = useState("Denys");
+
+    const input = useRef(null)
 
     return (
         <>
-            <ComponentA user={user} />
+            <input ref={input}/>
+            <button onClick={() => input.current.focus()}>Click me!</button>
+
         </>
     );
 }
