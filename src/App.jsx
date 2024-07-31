@@ -1,14 +1,14 @@
 import './App.css'
-import DigitalClock from "./DigitalClock.jsx";
+import ComponentA from "./ComponentA.jsx";
+import {useState} from "react";
 
 function App() {
 
+    const [user, setUser] = useState("Denys");
+
     return (
         <>
-            <DigitalClock/>
-            <DigitalClock/>
-            <DigitalClock/>
-            <DigitalClock/>
+            <ComponentA user={user} />
         </>
     );
 }
