@@ -1,11 +1,11 @@
 import './App.css'
-import TodoList from "./TodoList.jsx";
+import UseEffectComponent from "./useEffectComponent.jsx";
 
 function App() {
 
     return (
         <>
-            <TodoList/>
+            <UseEffectComponent/>
         </>
     );
 }
