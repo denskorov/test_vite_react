@@ -1,11 +1,11 @@
 import './App.css'
-import MyComponentForm from "./MyComponentForm.jsx";
+import TodoList from "./TodoList.jsx";
 
 function App() {
 
     return (
         <>
-            <MyComponentForm/>
+            <TodoList/>
         </>
     );
 }
